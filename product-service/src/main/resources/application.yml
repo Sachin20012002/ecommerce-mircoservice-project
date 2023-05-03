@@ -1,0 +1,44 @@
+grpc:
+    server:
+        port: 7000
+
+logging:
+    level:
+        org:
+            hibernate:
+                SQL: DEBUG     #logs the sql statements
+                type:
+                    descriptor:
+                        sql:
+                            BasicBinder:
+                                TRACE       #logs the parameters passed to preparedStatement
+server:
+    port: 9002
+    servlet:
+        context-path: /meesho/product-microservice
+
+spring:
+    application:
+        name: PRODUCT-SERVICE
+
+#    datasource:
+#        password: 12345678
+#        url: jdbc:mysql://192.168.1.76:3306/Product-Microservice
+#        username: meesho
+
+    datasource:
+        password: password
+        url: jdbc:mysql://localhost:3306/Product-Microservice
+        username: root
+
+    kafka:
+        bootstrap-servers: localhost:9092
+        producer:
+            key-serializer: org.apache.kafka.common.serialization.StringSerializer
+            value-serializer: org.apache.kafka.common.serialization.StringSerializer
+
+    jpa:
+        hibernate:
+            ddl-auto: update
+
+

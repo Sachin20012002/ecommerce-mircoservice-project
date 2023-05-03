@@ -1,0 +1,22 @@
+server:
+  port: 9100
+  servlet:
+    context-path: /meesho/filter-microservice
+spring:
+  application:
+    name: FILTER-SERVICE
+  kafka:
+    bootstrap-servers: localhost:9092
+    consumer:
+      group-id: myGroup
+      auto-offset-reset: earliest
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: org.apache.kafka.common.serialization.StringSerializer
+  data:
+    elasticsearch:
+      cluster-name: elasticsearch
+      cluster-nodes: localhost:9300
+
+logging:
+  level:
+    org.springframework.data.elasticsearch.client: DEBUG
