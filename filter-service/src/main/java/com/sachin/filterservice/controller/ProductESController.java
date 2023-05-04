@@ -1,7 +1,6 @@
 package com.sachin.filterservice.controller;
 
 import com.sachin.filterservice.dto.ProductDTO;
-import com.sachin.filterservice.model.ProductES;
 import com.sachin.filterservice.response.GenericResponse;
 import com.sachin.filterservice.service.ProductESService;
 import lombok.RequiredArgsConstructor;
@@ -11,7 +10,6 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -63,7 +61,6 @@ public class ProductESController {
 
     @GetMapping("/type/{typeName}")
     public GenericResponse<List<ProductDTO>> findByTypeName(@PathVariable String typeName){
-        Arrays.stream(new int[10]).reduce(1,(i,j)->i*j);
         return GenericResponse.<List<ProductDTO>>builder()
                 .code(200)
                 .data(productESService.findByTypeName(typeName)

@@ -15,6 +15,7 @@
         <module>cloud-config-server</module>
         <module>proto</module>
         <module>filter-service</module>
+        <module>order-service</module>
     </modules>
     <packaging>pom</packaging>
     <name>ecommerce-microservice-project</name>

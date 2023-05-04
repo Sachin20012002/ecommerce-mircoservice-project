@@ -6,6 +6,7 @@ import java.util.Optional;
 
 public class AuditableAware implements AuditorAware<String> {
 
+    @SuppressWarnings("NullableProblems")
     @Override
     public Optional<String> getCurrentAuditor() {
         return Optional.of("Rithika");

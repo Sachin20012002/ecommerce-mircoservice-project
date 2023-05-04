@@ -58,7 +58,6 @@ public class ProductES {
     @Field(type = FieldType.Boolean)
     private Boolean active;
 
-
     @Field(type = FieldType.Keyword)
     private List<String> sizeNames;
 

@@ -49,6 +49,9 @@ public class RestResponseEntityExceptionHandler extends ResponseEntityExceptionH
         return ResponseEntity.status(HttpStatus.OK).body(apiResponse);
     }
 
+
+
+    @SuppressWarnings("NullableProblems")
     @Override
     protected ResponseEntity<Object> handleMethodArgumentNotValid(MethodArgumentNotValidException exception, HttpHeaders headers, HttpStatus status, WebRequest request) {
         ApiResponse<?> apiResponse =new ApiResponse<>();

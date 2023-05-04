@@ -1,0 +1,57 @@
+logging:
+    level:
+        org:
+            hibernate:
+                SQL: DEBUG     #logs the sql statements
+                type:
+                    descriptor:
+                        sql:
+                            BasicBinder:
+                                TRACE       #logs the parameters passed to preparedStatement
+server:
+    port: 9006
+    servlet:
+        context-path: /meesho/order-microservice
+
+
+spring:
+    application:
+        name: ORDER-SERVICE
+    datasource:
+        url: jdbc:mysql://localhost:3306/Order-Microservice
+        username: root
+        password: password
+        driver-class-name: com.mysql.cj.jdbc.Driver
+        hikari:
+            minimum-idle: 5
+            maximum-pool-size: 20
+            connection-timeout: 30000
+            idle-timeout: 600000
+            max-lifetime: 1800000
+            pool-name: OrderPool
+    jpa:
+        show-sql: true
+        hibernate:
+            ddl-auto: update
+        properties:
+            hibernate:
+                format_sql: true
+                use_sql_comments: true
+                jdbc:
+                    batch_size: 20
+
+
+#    jdbc-url: This is the JDBC URL for your database. It typically includes the host, port, and database name.
+#    username: This is the username to connect to the database.
+#    password: This is the password to connect to the database.
+#    driver-class-name: This is the name of the JDBC driver class. For MySQL, it is com.mysql.cj.jdbc.Driver.
+#    minimum-idle: This is the minimum number of idle connections in the pool. It should be set to a value greater than 0 to ensure that there are always available connections in the pool.
+#    maximum-pool-size: This is the maximum number of connections in the pool. It should be set to a value that is appropriate for your application's workload and the capacity of your database server.
+#    connection-timeout: This is the maximum time that the connection pool will wait for a connection to become available. If a connection is not available within this time, an exception will be thrown.
+#    idle-timeout: This is the amount of time that a connection can remain idle in the pool before it is closed and removed from the pool. This helps to prevent connections from being held open unnecessarily.
+#    max-lifetime: This is the maximum amount of time that a connection can remain in the pool. Connections that exceed this time will be closed and removed from the pool.
+#    pool-name: This is an optional name for the connection pool. It can be used to distinguish between multiple Hikari connection pools in the same application.
+#    batch-size: In JPA, the batch size refers to the number of statements that are executed in a single database round trip.
+#                By default, each database operation results in a separate round trip to the database,
+#                but using batch processing can reduce the number of round trips required,
+#                thus improving the performance of the application.

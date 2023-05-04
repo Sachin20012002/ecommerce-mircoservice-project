@@ -1,53 +1,66 @@
 package com.codingmart.productmicroservice.controller;
 
-import com.codingmart.productmicroservice.response.GenericResponse;
 import com.codingmart.productmicroservice.entity.Brand;
+import com.codingmart.productmicroservice.enums.Response;
+import com.codingmart.productmicroservice.response.GenericResponse;
 import com.codingmart.productmicroservice.service.BrandService;
-import org.springframework.beans.factory.annotation.Autowired;
+import lombok.RequiredArgsConstructor;
+import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
+import java.util.List;
 
 @RestController
 @RequestMapping(value = "/brands",produces = "application/json")
+@RequiredArgsConstructor
 public class BrandController {
 
     private final BrandService brandService;
-    private final GenericResponse genericResponse;
 
-    @Autowired
-    public BrandController(BrandService brandService,GenericResponse genericResponse){
-        this.brandService=brandService;
-        this.genericResponse=genericResponse;
-    }
 
     @PostMapping(value = "",consumes = "application/json")
-    public GenericResponse addBrand(@Valid @RequestBody Brand brand){
-        genericResponse.setData(brandService.addBrand(brand));
-        return genericResponse;
+    public GenericResponse<Brand> addBrand(@Valid @RequestBody Brand brand){
+        return GenericResponse.<Brand>builder()
+                .code(201)
+                .status(HttpStatus.CREATED)
+                .data(brandService.addBrand(brand))
+                .build();
     }
 
     @GetMapping("")
-    public GenericResponse getAllBrands(){
-        genericResponse.setData(brandService.getAllBrands());
-        return genericResponse;
+    public GenericResponse<List<Brand>> getAllBrands(){
+        return GenericResponse.<List<Brand>>builder()
+                .code(200)
+                .status(HttpStatus.OK)
+                .data(brandService.getAllBrands())
+                .build();
     }
 
     @GetMapping("/{id}")
-    public GenericResponse getBrand(@PathVariable("id") Long id){
-        genericResponse.setData(brandService.getBrand(id));
-        return genericResponse;
+    public GenericResponse<Brand> getBrand(@PathVariable("id") Long id){
+        return GenericResponse.<Brand>builder()
+                .code(200)
+                .status(HttpStatus.OK)
+                .data(brandService.getBrand(id))
+                .build();
     }
 
     @DeleteMapping("/{id}")
-    public GenericResponse deleteBrand(@PathVariable("id") Long id){
-        genericResponse.setData(brandService.deleteBrand(id));
-        return genericResponse;
+    public GenericResponse<Response> deleteBrand(@PathVariable("id") Long id){
+        return GenericResponse.<Response>builder()
+                .code(204)
+                .status(HttpStatus.OK)
+                .data(brandService.deleteBrand(id))
+                .build();
     }
 
     @PutMapping(value = "/{id}",consumes = "application/json")
-    public GenericResponse updateBrand(@Valid @RequestBody Brand brand,@PathVariable("id") Long id){
-        genericResponse.setData(brandService.updateBrand(brand,id));
-        return genericResponse;
+    public GenericResponse<Brand> updateBrand(@Valid @RequestBody Brand brand,@PathVariable("id") Long id){
+        return GenericResponse.<Brand>builder()
+                .code(204)
+                .status(HttpStatus.OK)
+                .data(brandService.updateBrand(brand,id))
+                .build();
     }
 }

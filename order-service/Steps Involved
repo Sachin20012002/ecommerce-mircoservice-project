@@ -1,0 +1,6 @@
+Step 1: Enter phone Number and submit OTP
+Step 2: Enter Contact Details and Address
+    Contact Details -> name,phoneNumber
+    Address -> House no., Road Name/Area/colony, Pin-code, city, state,nearBy location(Optional)
+
+Step 3: Payment details
