@@ -1,5 +1,6 @@
 package com.sachin.ordermicroservice.entity;
 
+import com.sachin.ordermicroservice.enums.OrderStatus;
 import lombok.*;
 import org.hibernate.Hibernate;
 
@@ -23,11 +24,20 @@ public class Order {
     private String orderNumber;
     private Long customerId;
 
-    private Long AddressId;
+    @OneToOne
+    private Address shippingAddress;
+    @OneToOne
+    private Address billingAddress;
 
     @OneToMany(mappedBy = "order", cascade = CascadeType.ALL, orphanRemoval = true)
     @ToString.Exclude
     private List<OrderItem> orderItems;
+
+    @Enumerated(value = EnumType.STRING)
+    private OrderStatus orderStatus;
+
+    @OneToOne(cascade = CascadeType.ALL)
+    private Payment payment;
 
 
     @Override
