@@ -3,10 +3,7 @@ package com.sachin.usermicroservice.service;
 import com.sachin.usermicroservice.model.User;
 import com.sachin.usermicroservice.repository.UserRepository;
 import com.sachin.usermicroservice.response.LoginResponse;
-import com.sachin.usermicroservice.service.UserService;
-import com.twilio.jwt.Jwt;
 import lombok.RequiredArgsConstructor;
-import org.springframework.security.authentication.BadCredentialsException;
 import org.springframework.stereotype.Service;
 
 @Service

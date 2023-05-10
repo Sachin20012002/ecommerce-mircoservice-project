@@ -34,7 +34,7 @@ public class OtpService {
         twilioService.sendOtp(phoneNumber, otp);
     }
 
-    public boolean verifyOtp(String phoneNumber, String otp) {
+    public void verifyOtp(String phoneNumber, String otp) {
         // Check if the OTP exists in the database and is not expired
         Optional<OtpEntity> otpEntityOptional = otpRepository.findByPhoneNumber(phoneNumber);
         if (otpEntityOptional.isEmpty() || otpEntityOptional.get().getExpirationTime().isBefore(LocalDateTime.now())) {
@@ -49,6 +49,5 @@ public class OtpService {
 
         // OTP is valid, delete it from the database
         otpRepository.delete(otpEntity);
-        return true;
     }
 }
