@@ -14,6 +14,8 @@ server:
         context-path: /meesho/order-microservice
 
 
+
+
 spring:
     application:
         name: ORDER-SERVICE
@@ -21,14 +23,6 @@ spring:
         url: jdbc:mysql://localhost:3306/Order-Microservice
         username: root
         password: password
-        driver-class-name: com.mysql.cj.jdbc.Driver
-        hikari:
-            minimum-idle: 5
-            maximum-pool-size: 20
-            connection-timeout: 30000
-            idle-timeout: 600000
-            max-lifetime: 1800000
-            pool-name: OrderPool
     jpa:
         show-sql: true
         hibernate:
@@ -36,9 +30,14 @@ spring:
         properties:
             hibernate:
                 format_sql: true
-                use_sql_comments: true
-                jdbc:
-                    batch_size: 20
+        hikari:
+            minimum-idle: 5
+            maximum-pool-size: 20
+            connection-timeout: 30000
+            idle-timeout: 600000
+            max-lifetime: 1800000
+            pool-name: OrderPool
+
 
 
 #    jdbc-url: This is the JDBC URL for your database. It typically includes the host, port, and database name.

@@ -12,6 +12,7 @@
     </list>
     <writeAnnotations>
       <writeAnnotation name="net.devh.boot.grpc.client.inject.GrpcClient" />
+      <writeAnnotation name="org.springframework.beans.factory.annotation.Value" />
     </writeAnnotations>
   </component>
   <component name="ExternalStorageConfigurationManager" enabled="true" />

@@ -8,13 +8,14 @@ import javax.persistence.*;
 import java.util.List;
 import java.util.Objects;
 
-@Entity
+
 @AllArgsConstructor
 @NoArgsConstructor
 @Getter
 @Setter
 @ToString
-@RequiredArgsConstructor
+@Entity
+@Table(name = "Orders")
 @Builder
 public class Order {
 
@@ -23,13 +24,10 @@ public class Order {
     private Long id;
     private String orderNumber;
     private Long customerId;
+    private String shippingAddressId;
+    private String billingAddressId;
 
-    @OneToOne
-    private Address shippingAddress;
-    @OneToOne
-    private Address billingAddress;
-
-    @OneToMany(mappedBy = "order", cascade = CascadeType.ALL, orphanRemoval = true)
+    @OneToMany(mappedBy = "order", cascade = CascadeType.ALL)
     @ToString.Exclude
     private List<OrderItem> orderItems;
 
