@@ -28,4 +28,6 @@ public interface ProductService {
     List<Product> getAllActiveProducts();
 
     List<Product> getAllActiveProductsByChildCategoryId(Long id);
+
+    List<Product> findByIdIn(List<Long> productIdList);
 }

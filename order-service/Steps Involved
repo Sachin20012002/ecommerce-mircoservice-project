@@ -4,3 +4,12 @@ Step 2: Enter Contact Details and Address
     Address -> House no., Road Name/Area/colony, Pin-code, city, state,nearBy location(Optional)
 
 Step 3: Payment details
+
+
+* you can associate one cart with one order object, when the user completes the order,
+  user gets a new cart.
+
+
+Razor Pay:
+key id: rzp_test_8ZxKiN0ZpqMvLd
+key secret: qTrl8lFwUKt6GkV6JZbY75Zc

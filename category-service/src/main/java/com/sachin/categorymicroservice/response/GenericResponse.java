@@ -12,7 +12,7 @@ import org.springframework.stereotype.Component;
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-public class ApiResponse<T> {
+public class GenericResponse<T> {
         private Integer code;
         private HttpStatus status;
         private T data;

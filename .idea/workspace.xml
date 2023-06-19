@@ -5,7 +5,112 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="838bbe56-6c01-4a5c-9dce-c83fc228073e" name="Changes" comment="commit">
+      <change afterPath="$PROJECT_DIR$/TODO" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cart-service/src/main/java/com/sachin/cartmicroservice/controller/CheckOutController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cart-service/src/main/java/com/sachin/cartmicroservice/controller/PaymentController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cart-service/src/main/java/com/sachin/cartmicroservice/dto/CreateCartMessage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cart-service/src/main/java/com/sachin/cartmicroservice/dto/ProductDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cart-service/src/main/java/com/sachin/cartmicroservice/enums/PaymentStatus.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cart-service/src/main/java/com/sachin/cartmicroservice/enums/PaymentType.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cart-service/src/main/java/com/sachin/cartmicroservice/model/CheckOut.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cart-service/src/main/java/com/sachin/cartmicroservice/model/Payment.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cart-service/src/main/java/com/sachin/cartmicroservice/repository/CheckOutRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cart-service/src/main/java/com/sachin/cartmicroservice/repository/PaymentRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cart-service/src/main/java/com/sachin/cartmicroservice/response/SummaryResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cart-service/src/main/java/com/sachin/cartmicroservice/service/CheckOutService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cart-service/src/main/java/com/sachin/cartmicroservice/service/CheckOutServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cart-service/src/main/java/com/sachin/cartmicroservice/service/KafkaService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cart-service/src/main/java/com/sachin/cartmicroservice/service/PaymentService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cart-service/src/main/java/com/sachin/cartmicroservice/service/PaymentServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cart-service/src/main/java/com/sachin/cartmicroservice/service/grpc/GrpcService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/category-service/src/main/java/com/sachin/categorymicroservice/config/ApplicationConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/category-service/src/main/java/com/sachin/categorymicroservice/config/SecurityConfiguration.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/category-service/src/main/java/com/sachin/categorymicroservice/exception/JwtTokenException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/category-service/src/main/java/com/sachin/categorymicroservice/filter/ExceptionHandlerFilter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/category-service/src/main/java/com/sachin/categorymicroservice/filter/JwtAuthenticationFilter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/category-service/src/main/java/com/sachin/categorymicroservice/service/GrpcService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/category-service/src/main/java/com/sachin/categorymicroservice/util/JwtUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/category-service/src/main/resources/logback-spring.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/demo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/order-service/src/main/java/com/sachin/ordermicroservice/config/RazorPayClientConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/order-service/src/main/java/com/sachin/ordermicroservice/controller/PaymentController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/order-service/src/main/java/com/sachin/ordermicroservice/request/PaymentRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/order-service/src/main/java/com/sachin/ordermicroservice/response/PaymentResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/product-service/src/main/resources/logback-spring.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user-service/Steps to follow before starting user-service" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user-service/src/main/java/com/sachin/usermicroservice/controller/AuthenticateController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user-service/src/main/java/com/sachin/usermicroservice/dto/CreateCartResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user-service/src/main/java/com/sachin/usermicroservice/enums/Role.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user-service/src/main/java/com/sachin/usermicroservice/exception/BadRequestException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user-service/src/main/java/com/sachin/usermicroservice/exception/JwtTokenException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user-service/src/main/java/com/sachin/usermicroservice/filter/ExceptionHandlerFilter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user-service/src/main/java/com/sachin/usermicroservice/records/UserRecord.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user-service/src/main/java/com/sachin/usermicroservice/service/AuthenticateService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user-service/src/main/java/com/sachin/usermicroservice/service/CustomerService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user-service/src/main/java/com/sachin/usermicroservice/service/MessagingService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user-service/src/main/java/com/sachin/usermicroservice/service/OtpSender.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user-service/src/main/java/com/sachin/usermicroservice/service/implementations/AuthenticateServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user-service/src/main/java/com/sachin/usermicroservice/service/implementations/CustomerServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user-service/src/main/java/com/sachin/usermicroservice/service/implementations/MessagingServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user-service/src/main/java/com/sachin/usermicroservice/service/implementations/OptServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user-service/src/main/resources/bootstrap.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-gateway/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-gateway/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cart-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/cart-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cart-service/src/main/java/com/sachin/cartmicroservice/controller/CartController.java" beforeDir="false" afterPath="$PROJECT_DIR$/cart-service/src/main/java/com/sachin/cartmicroservice/controller/CartController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cart-service/src/main/java/com/sachin/cartmicroservice/model/Cart.java" beforeDir="false" afterPath="$PROJECT_DIR$/cart-service/src/main/java/com/sachin/cartmicroservice/model/Cart.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cart-service/src/main/java/com/sachin/cartmicroservice/service/CartService.java" beforeDir="false" afterPath="$PROJECT_DIR$/cart-service/src/main/java/com/sachin/cartmicroservice/service/CartService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cart-service/src/main/java/com/sachin/cartmicroservice/service/CartServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/cart-service/src/main/java/com/sachin/cartmicroservice/service/CartServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cart-service/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/cart-service/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/category-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/category-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/category-service/src/main/java/com/sachin/categorymicroservice/controller/CategoryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/category-service/src/main/java/com/sachin/categorymicroservice/controller/CategoryController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/category-service/src/main/java/com/sachin/categorymicroservice/controller/ChildCategoryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/category-service/src/main/java/com/sachin/categorymicroservice/controller/ChildCategoryController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/category-service/src/main/java/com/sachin/categorymicroservice/controller/SubCategoryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/category-service/src/main/java/com/sachin/categorymicroservice/controller/SubCategoryController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/category-service/src/main/java/com/sachin/categorymicroservice/exceptionhandler/RestResponseEntityExceptionHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/category-service/src/main/java/com/sachin/categorymicroservice/exceptionhandler/RestResponseEntityExceptionHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/category-service/src/main/java/com/sachin/categorymicroservice/response/ApiResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/category-service/src/main/java/com/sachin/categorymicroservice/response/GenericResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/category-service/src/main/java/com/sachin/categorymicroservice/service/ChildCategoryService.java" beforeDir="false" afterPath="$PROJECT_DIR$/category-service/src/main/java/com/sachin/categorymicroservice/service/ChildCategoryService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/category-service/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/category-service/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud-config-server/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-config-server/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/filter-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/filter-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/filter-service/src/main/java/com/sachin/filterservice/service/KafkaService.java" beforeDir="false" afterPath="$PROJECT_DIR$/filter-service/src/main/java/com/sachin/filterservice/service/KafkaService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/filter-service/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/filter-service/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/order-service/Steps Involved" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/Steps Involved" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/order-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/order-service/src/main/java/com/sachin/ordermicroservice/OrderServiceApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/java/com/sachin/ordermicroservice/OrderServiceApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/order-service/src/main/java/com/sachin/ordermicroservice/enums/PaymentType.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/java/com/sachin/ordermicroservice/enums/PaymentType.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/order-service/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/product-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/product-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/product-service/src/main/java/com/codingmart/productmicroservice/controller/ProductController.java" beforeDir="false" afterPath="$PROJECT_DIR$/product-service/src/main/java/com/codingmart/productmicroservice/controller/ProductController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/product-service/src/main/java/com/codingmart/productmicroservice/repository/ProductRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/product-service/src/main/java/com/codingmart/productmicroservice/repository/ProductRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/product-service/src/main/java/com/codingmart/productmicroservice/service/ProductService.java" beforeDir="false" afterPath="$PROJECT_DIR$/product-service/src/main/java/com/codingmart/productmicroservice/service/ProductService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/product-service/src/main/java/com/codingmart/productmicroservice/service/ProductServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/product-service/src/main/java/com/codingmart/productmicroservice/service/ProductServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/product-service/src/main/java/com/codingmart/productmicroservice/service/grpc/GrpcProductService.java" beforeDir="false" afterPath="$PROJECT_DIR$/product-service/src/main/java/com/codingmart/productmicroservice/service/grpc/GrpcProductService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/product-service/src/main/java/com/codingmart/productmicroservice/service/kafka/KafkaService.java" beforeDir="false" afterPath="$PROJECT_DIR$/product-service/src/main/java/com/codingmart/productmicroservice/service/kafka/KafkaService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/product-service/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/product-service/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/proto/src/main/proto/product-service.proto" beforeDir="false" afterPath="$PROJECT_DIR$/proto/src/main/proto/product-service.proto" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/com/sachin/usermicroservice/UserServiceApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/java/com/sachin/usermicroservice/UserServiceApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/com/sachin/usermicroservice/config/ApplicationConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/java/com/sachin/usermicroservice/config/ApplicationConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/com/sachin/usermicroservice/config/SecurityConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/java/com/sachin/usermicroservice/config/SecurityConfiguration.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/com/sachin/usermicroservice/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/java/com/sachin/usermicroservice/controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/com/sachin/usermicroservice/exceptionhandler/RestResponseEntityExceptionHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/java/com/sachin/usermicroservice/exceptionhandler/RestResponseEntityExceptionHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/com/sachin/usermicroservice/filter/CsrfCookieFilter.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/com/sachin/usermicroservice/filter/JwtAuthenticationFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/java/com/sachin/usermicroservice/filter/JwtAuthenticationFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/com/sachin/usermicroservice/model/Customer.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/java/com/sachin/usermicroservice/model/Customer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/com/sachin/usermicroservice/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/java/com/sachin/usermicroservice/model/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/com/sachin/usermicroservice/repository/CustomerRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/java/com/sachin/usermicroservice/repository/CustomerRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/com/sachin/usermicroservice/repository/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/java/com/sachin/usermicroservice/repository/UserRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/com/sachin/usermicroservice/service/JwtService.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/java/com/sachin/usermicroservice/util/JwtUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/com/sachin/usermicroservice/service/OtpService.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/java/com/sachin/usermicroservice/service/OtpService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/com/sachin/usermicroservice/service/TwilioService.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/java/com/sachin/usermicroservice/service/implementations/TwilioService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/com/sachin/usermicroservice/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/java/com/sachin/usermicroservice/service/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/com/sachin/usermicroservice/service/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/java/com/sachin/usermicroservice/service/implementations/UserServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/src/test/java/com/sachin/usermicroservice/service/UserServiceImplTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/test/java/com/sachin/usermicroservice/service/UserServiceImplTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -18,10 +123,11 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="JUnit5 Test Class" />
         <option value="Enum" />
         <option value="Interface" />
+        <option value="Record" />
         <option value="Class" />
-        <option value="JUnit5 Test Class" />
       </list>
     </option>
   </component>
@@ -55,25 +161,29 @@
     </option>
   </component>
   <component name="ProblemsViewState">
+    <option name="proportion" value="0.33411214" />
     <option name="selectedTabId" value="CurrentFile" />
     <option name="showPreview" value="true" />
   </component>
   <component name="ProjectId" id="2OrQLJwbmCoJku5HDi3n64YGkFq" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
     "git-widget-placeholder": "master",
-    "jdk.selected.JAVA_MODULE": "17",
-    "last_opened_file_path": "/home/user/Documents/MyProjects/ecommerce-mircoservice-project/user-service/src/main/java/com/sachin/usermicroservice",
+    "jdk.selected.JAVA_MODULE": "corretto-17",
+    "last_opened_file_path": "/home/sachin/IdeaProjects/ecommerce-mircoservice-project/category-service/src/main/java/com/sachin/categorymicroservice",
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
@@ -82,40 +192,56 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
-      <recent name="com.sachin.usermicroservice.model" />
-      <recent name="com.sachin.usermicroservice.repository" />
-      <recent name="com.sachin.usermicroservice.request" />
-      <recent name="com.sachin.usermicroservice.response" />
+      <recent name="com.sachin.usermicroservice.service" />
+      <recent name="com.sachin.usermicroservice.enums" />
+      <recent name="com.sachin.cartmicroservice.repository" />
       <recent name="com.sachin.cartmicroservice.service" />
+      <recent name="com.sachin.ordermicroservice.response" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/category-service/src/main/java/com/sachin/categorymicroservice" />
+      <recent name="$PROJECT_DIR$/identity-provider/src/main/resources" />
+      <recent name="$PROJECT_DIR$/category-service/src/main/resources" />
+      <recent name="$PROJECT_DIR$/user-service/src/main/resources" />
       <recent name="$PROJECT_DIR$/user-service/src/main/java/com/sachin/usermicroservice" />
-      <recent name="$PROJECT_DIR$/cart-service/src/main/resources" />
-      <recent name="$PROJECT_DIR$/cart-service/src/main/java/com/sachin/cartmicroservice" />
-      <recent name="$PROJECT_DIR$/order-service/src/main/java/com/sachin/ordermicroservice" />
-      <recent name="$PROJECT_DIR$/order-service/src/main" />
     </key>
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="com.sachin.usermicroservice.service" />
     </key>
     <key name="CreateTestDialog.RecentsKey">
       <recent name="com.sachin.usermicroservice.service" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="com.sachin.cartmicroservice.service" />
-      <recent name="com.sachin.usermicroservice.service.impl" />
-      <recent name="com.sachin.ordermicroservice.exceptionhandler" />
-      <recent name="com.sachin.ordermicroservice.exception" />
-      <recent name="com.sachin.cartmicroservice.exceptionhandler" />
+      <recent name="com.sachin.categorymicroservice.exception" />
+      <recent name="com.sachin.usermicroservice.exception" />
+      <recent name="com.sachin.cartmicroservice.dto" />
+      <recent name="com.sachin.cartmicroservice.service.grpc" />
+      <recent name="com.sachin.cartmicroservice.enums" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.CloudConfigServerApplication">
+  <component name="RunManager" selected="Application.CategoryServiceApplication">
     <configuration name="ApiGatewayApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.sachin.api.gateway.ApiGatewayApplication" />
       <module name="api-gateway" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.sachin.api.gateway.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CategoryServiceApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.sachin.categorymicroservice.CategoryServiceApplication" />
+      <module name="category-service" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.sachin.categorymicroservice.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -162,29 +288,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="UserServiceImplTest.sendOtp" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="user-service" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.sachin.usermicroservice.service.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.sachin.usermicroservice.service" />
-      <option name="MAIN_CLASS_NAME" value="com.sachin.usermicroservice.service.UserServiceImplTest" />
-      <option name="METHOD_NAME" value="sendOtp" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.CategoryServiceApplication" />
+        <item itemvalue="Application.UserServiceApplication" />
+        <item itemvalue="Application.ApiGatewayApplication" />
         <item itemvalue="Application.CloudConfigServerApplication" />
         <item itemvalue="Application.ServiceRegistryApplication" />
-        <item itemvalue="Application.ApiGatewayApplication" />
-        <item itemvalue="JUnit.UserServiceImplTest.sendOtp" />
-        <item itemvalue="Application.UserServiceApplication" />
       </list>
     </recent_temporary>
   </component>
@@ -244,6 +354,7 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="commit" />
     <option name="LAST_COMMIT_MESSAGE" value="commit" />
   </component>
@@ -252,7 +363,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/user-service/src/test/java/com/sachin/usermicroservice/service/UserServiceImplTest.java</url>
-          <line>19</line>
+          <line>17</line>
           <properties class="com.sachin.usermicroservice.service.UserServiceImplTest" method="sendOtp">
             <option name="EMULATED" value="true" />
             <option name="WATCH_EXIT" value="false" />

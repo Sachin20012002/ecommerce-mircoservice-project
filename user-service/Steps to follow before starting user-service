@@ -1,0 +1,2 @@
+1) Start kafka zookeeper and Kafka server
+2) start mongodb "sudo systemctl start mongod"

@@ -16,7 +16,7 @@ public class KafkaService {
     @SneakyThrows
     @KafkaListener(
             topics = "POST",
-            groupId = "myGroup"
+            groupId = "myGroup-1"
     )
     public void consume(String eventMessage){
         System.out.println(eventMessage);

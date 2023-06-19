@@ -5,6 +5,7 @@ import com.codingmart.productmicroservice.enums.Response;
 import com.codingmart.productmicroservice.response.GenericResponse;
 import com.codingmart.productmicroservice.service.ProductService;
 import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
@@ -14,6 +15,7 @@ import java.util.List;
 @RestController
 @RequiredArgsConstructor
 @RequestMapping("/products")
+@Slf4j
 public class ProductController {
     private final ProductService productService;
 
@@ -66,6 +68,7 @@ public class ProductController {
 
     @GetMapping("")
     public GenericResponse<List<Product>> getAllProducts(){
+        log.info("Checking logs");
         return GenericResponse.<List<Product>>builder()
                 .code(200)
                 .status(HttpStatus.OK)

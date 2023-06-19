@@ -1,14 +1,21 @@
 package com.sachin.usermicroservice.service;
 
+import com.sachin.usermicroservice.enums.Role;
 import com.sachin.usermicroservice.model.User;
 import com.sachin.usermicroservice.response.LoginResponse;
+
+import java.util.List;
 
 public interface UserService {
     User save(User user);
 
-    LoginResponse getLoginResponse(String phoneNumber);
+    List<User> getAllUsers();
 
-    void sendOtp(String phoneNumber);
+    User getById(String userId);
 
-    LoginResponse login(String phoneNumber, String otp);
+    boolean isExistsByPhoneNumber(String phoneNumber);
+
+    User createUser(String phoneNumber, Role role);
+
+    User getByPhoneNumber(String phoneNumber);
 }

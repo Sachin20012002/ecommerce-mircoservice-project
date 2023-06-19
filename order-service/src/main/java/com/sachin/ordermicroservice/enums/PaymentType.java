@@ -1,7 +1,7 @@
 package com.sachin.ordermicroservice.enums;
 
 public enum PaymentType {
-    COD,
+    CASH_ON_DELIVERY,
     CREDIT,
     DEBIT,
     UPI

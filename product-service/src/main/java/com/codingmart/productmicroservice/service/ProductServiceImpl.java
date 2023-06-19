@@ -237,6 +237,11 @@ public class ProductServiceImpl implements ProductService{
         return productRepository.findAllByActiveAndChildCategoryId(true,id);
     }
 
+    @Override
+    public List<Product> findByIdIn(List<Long> productIdList) {
+        return productRepository.findByIdIn(productIdList);
+    }
+
     /**
      * This method calculates total quantity of the product by the summation
      *          of the quantities of each size.

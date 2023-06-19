@@ -4,7 +4,7 @@ import java.util.List;
 
 import com.sachin.categorymicroservice.dto.ProductDto;
 import com.sachin.categorymicroservice.entity.ChildCategory;
-import com.sachin.categorymicroservice.response.ApiResponse;
+import com.sachin.categorymicroservice.response.GenericResponse;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -20,7 +20,7 @@ import com.sachin.categorymicroservice.entity.SubCategory;
 import com.sachin.categorymicroservice.service.SubCategoryService;
 
 @RestController
-@RequestMapping("/SubCategories")
+@RequestMapping("/sub-categories")
 @RequiredArgsConstructor
 public class SubCategoryController {
 	
@@ -28,8 +28,8 @@ public class SubCategoryController {
 
 	
 	@PostMapping()
-	public ApiResponse<SubCategory> saveSubCategory(@RequestBody SubCategory subCategory) {
-		return ApiResponse.<SubCategory>builder()
+	public GenericResponse<SubCategory> saveSubCategory(@RequestBody SubCategory subCategory) {
+		return GenericResponse.<SubCategory>builder()
 				.code(201)
 				.status(HttpStatus.CREATED)
 				.data(subCategoryService.saveSubCategory(subCategory))
@@ -37,24 +37,24 @@ public class SubCategoryController {
 
 	}
 	@PostMapping("/saveAllSubCategory")
-	public ApiResponse<List<SubCategory>> saveAllSubCategory(@RequestBody List<SubCategory> subCategories){
-		return ApiResponse.<List<SubCategory>>builder()
+	public GenericResponse<List<SubCategory>> saveAllSubCategory(@RequestBody List<SubCategory> subCategories){
+		return GenericResponse.<List<SubCategory>>builder()
 				.code(201)
 				.status(HttpStatus.CREATED)
 				.data(subCategoryService.saveAllSubCategory(subCategories))
 				.build();
 	}
 	@GetMapping()
-	public ApiResponse<List<SubCategory>> getAllSubCategory(){
-		return ApiResponse.<List<SubCategory>>builder()
+	public GenericResponse<List<SubCategory>> getAllSubCategory(){
+		return GenericResponse.<List<SubCategory>>builder()
 				.code(201)
 				.status(HttpStatus.CREATED)
 				.data(subCategoryService.getAllSubCategory())
 				.build();
 	}
 	@GetMapping("/{id}")
-	public ApiResponse<SubCategory> getSubCategoryById(@PathVariable Long id) {
-		return ApiResponse.<SubCategory>builder()
+	public GenericResponse<SubCategory> getSubCategoryById(@PathVariable Long id) {
+		return GenericResponse.<SubCategory>builder()
 				.code(201)
 				.status(HttpStatus.CREATED)
 				.data(subCategoryService.getSubCategoryById(id))
@@ -62,8 +62,8 @@ public class SubCategoryController {
 	}
 
 	@GetMapping("/subCategory/{name}")
-	public ApiResponse<SubCategory> getSubCategoryByName(@PathVariable String name) {
-		return ApiResponse.<SubCategory>builder()
+	public GenericResponse<SubCategory> getSubCategoryByName(@PathVariable String name) {
+		return GenericResponse.<SubCategory>builder()
 				.code(201)
 				.status(HttpStatus.CREATED)
 				.data(subCategoryService.getSubCategoryByName(name))
@@ -71,8 +71,8 @@ public class SubCategoryController {
 	}
 
 	@PutMapping("/{id}")
-	public ApiResponse<SubCategory> updateSubCategory(@RequestBody SubCategory subCategory ,@PathVariable("id") Long id) {
-		return ApiResponse.<SubCategory>builder()
+	public GenericResponse<SubCategory> updateSubCategory(@RequestBody SubCategory subCategory , @PathVariable("id") Long id) {
+		return GenericResponse.<SubCategory>builder()
 				.code(201)
 				.status(HttpStatus.CREATED)
 				.data(subCategoryService.updateSubCategory(subCategory,id))
@@ -80,17 +80,17 @@ public class SubCategoryController {
 	}
 
 	@DeleteMapping("/{id}")
-	public ApiResponse<?> deleteSubCategory(@PathVariable Long id) {
+	public GenericResponse<?> deleteSubCategory(@PathVariable Long id) {
 		subCategoryService.deleteSubCategory(id);
-		return ApiResponse.builder()
+		return GenericResponse.builder()
 				.code(201)
 				.status(HttpStatus.CREATED)
 				.build();
 	}
 	
 	@GetMapping("/getAllSubCategoriesFromCategoryId/{id}")
-	public ApiResponse<List<SubCategory>> getAllSubCategoriesFromCategoryId(@PathVariable Long id){
-		return ApiResponse.<List<SubCategory>>builder()
+	public GenericResponse<List<SubCategory>> getAllSubCategoriesFromCategoryId(@PathVariable Long id){
+		return GenericResponse.<List<SubCategory>>builder()
 				.code(201)
 				.status(HttpStatus.CREATED)
 				.data(subCategoryService.getAllSubCategoriesFromCategoryId(id))
@@ -98,8 +98,8 @@ public class SubCategoryController {
 	}
 
 	@PostMapping("/{id}")
-	public ApiResponse<SubCategory> saveChildCategoryForSubcategory(@RequestBody ChildCategory childCategory, @PathVariable Long id){
-		return ApiResponse.<SubCategory>builder()
+	public GenericResponse<SubCategory> saveChildCategoryForSubcategory(@RequestBody ChildCategory childCategory, @PathVariable Long id){
+		return GenericResponse.<SubCategory>builder()
 				.code(201)
 				.status(HttpStatus.CREATED)
 				.data(subCategoryService.saveChildCategoryForSubcategory(childCategory,id))
@@ -107,8 +107,8 @@ public class SubCategoryController {
 	}
 
 	@GetMapping("/products/{id}")
-	public ApiResponse<List<ProductDto>> getAllProductsFromSubCategoryId(@PathVariable("id") Long id){
-		return ApiResponse.<List<ProductDto>>builder()
+	public GenericResponse<List<ProductDto>> getAllProductsFromSubCategoryId(@PathVariable("id") Long id){
+		return GenericResponse.<List<ProductDto>>builder()
 				.code(201)
 				.status(HttpStatus.CREATED)
 				.data(subCategoryService.getAllProductsFromSubCategoryId(id))

@@ -8,6 +8,7 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
+import java.util.List;
 
 @Service
 @RequiredArgsConstructor
@@ -25,10 +26,10 @@ public class CartServiceImpl implements CartService {
 
     @Override
     public Cart initialiseCartToCustomer(String customerId) {
-        return cartRepository.save(Cart.builder()
+        return cartRepository.findById(customerId).orElse(cartRepository.save(Cart.builder()
                 .customerId(customerId)
                 .cartItems(new ArrayList<>())
-                .build());
+                .build()));
     }
 
     @Override
@@ -36,4 +37,16 @@ public class CartServiceImpl implements CartService {
         String customerId=jwtService.getUserIdFromToken(token);
         return cartRepository.findByCustomerId(customerId).orElse(initialiseCartToCustomer(customerId));
     }
+
+    @Override
+    public List<Cart> getAllCarts() {
+        return cartRepository.findAll();
+    }
+
+    @Override
+    public Cart getCartById(String cartId) {
+        return cartRepository.findById(cartId).orElseThrow(()-> new NotFoundException("cartId not found"));
+    }
+
+
 }

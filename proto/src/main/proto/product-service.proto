@@ -18,6 +18,11 @@ message ProductServiceResponse {
   repeated ProductGrpc products = 1;
 }
 
+message GetProductsRequest{
+  repeated int64 productId = 1;
+}
+
 service ProductService {
   rpc getAllProductsByChildCategoryId(ProductServiceRequest) returns (ProductServiceResponse);
+  rpc getAllProducts(GetProductsRequest) returns (ProductServiceResponse);
 }

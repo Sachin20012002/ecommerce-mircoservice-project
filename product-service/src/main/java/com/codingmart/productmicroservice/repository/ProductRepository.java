@@ -20,4 +20,6 @@ public interface ProductRepository extends JpaRepository<Product,Long> {
     List<Product> findAllByActive(boolean b);
 
     List<Product> findAllByActiveAndChildCategoryId(boolean b, Long id);
+
+    List<Product> findByIdIn(List<Long> productIdList);
 }

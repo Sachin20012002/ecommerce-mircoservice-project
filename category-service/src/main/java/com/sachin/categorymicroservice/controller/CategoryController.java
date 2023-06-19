@@ -3,7 +3,7 @@ package com.sachin.categorymicroservice.controller;
 import com.sachin.categorymicroservice.dto.ProductDto;
 import com.sachin.categorymicroservice.entity.Category;
 import com.sachin.categorymicroservice.entity.SubCategory;
-import com.sachin.categorymicroservice.response.ApiResponse;
+import com.sachin.categorymicroservice.response.GenericResponse;
 import com.sachin.categorymicroservice.service.CategoryService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
@@ -21,15 +21,15 @@ public class CategoryController {
 
 
 	@PostMapping()
-	public ApiResponse<Category> saveCategory(@RequestBody Category category) {
-		return ApiResponse.<Category>builder()
+	public GenericResponse<Category> saveCategory(@RequestBody Category category) {
+		return GenericResponse.<Category>builder()
 				.data(categoryService.saveCategory(category))
 				.build();
 	}
 
 	@PostMapping("/saveAllCategory")
-	public ApiResponse<List<Category>> saveAllCategory(@RequestBody List<Category> categories){
-		return ApiResponse.<List<Category>>builder()
+	public GenericResponse<List<Category>> saveAllCategory(@RequestBody List<Category> categories){
+		return GenericResponse.<List<Category>>builder()
 				.code(201)
 				.status(HttpStatus.CREATED)
 				.data(categoryService.saveAllCategory(categories))
@@ -37,8 +37,8 @@ public class CategoryController {
 	}
 
 	@GetMapping("")
-	public ApiResponse<List<Category>> getAllCategory(){
-		return ApiResponse.<List<Category>>builder()
+	public GenericResponse<List<Category>> getAllCategory(){
+		return GenericResponse.<List<Category>>builder()
 				.code(200)
 				.status(HttpStatus.OK)
 				.data(categoryService.getAllCategories())
@@ -46,8 +46,8 @@ public class CategoryController {
 	}
 	
 	@GetMapping("/{id}")
-	public ApiResponse<Category> getCategoryById(@PathVariable Long id) {
-		return ApiResponse.<Category>builder()
+	public GenericResponse<Category> getCategoryById(@PathVariable Long id) {
+		return GenericResponse.<Category>builder()
 				.code(200)
 				.status(HttpStatus.OK)
 				.data(categoryService.getCategoryById(id))
@@ -55,8 +55,8 @@ public class CategoryController {
 		}
 	
 	@GetMapping("/category/{name}")
-	public ApiResponse<Category> getCategoryByName(@PathVariable String name) {
-		return ApiResponse.<Category>builder()
+	public GenericResponse<Category> getCategoryByName(@PathVariable String name) {
+		return GenericResponse.<Category>builder()
 				.code(200)
 				.status(HttpStatus.OK)
 				.data(categoryService.getCategoryByName(name))
@@ -65,26 +65,26 @@ public class CategoryController {
 	
 	
 	@PutMapping("/{id}")
-	public ApiResponse<Category> updateCategory(@RequestBody Category category,@PathVariable("id")Long id) {
-		return ApiResponse.<Category>builder()
+	public GenericResponse<Category> updateCategory(@RequestBody Category category, @PathVariable("id")Long id) {
+		return GenericResponse.<Category>builder()
 				.code(200)
 				.status(HttpStatus.OK)
 				.data(categoryService.UpdateCategory(category,id))
 				.build();
 	}
 	@DeleteMapping("/{id}")
-	public ApiResponse<?> deleteCategory(@PathVariable Long id)
+	public GenericResponse<?> deleteCategory(@PathVariable Long id)
 	{
 		categoryService.deleteCategory(id);
-		return ApiResponse.builder()
+		return GenericResponse.builder()
 				.code(200)
 				.status(HttpStatus.OK)
 				.build();
 	}
 
 	@PostMapping("/{id}")
-	public ApiResponse<Category> saveSubCategoryForCategory(@RequestBody SubCategory subCategory,@PathVariable Long id){
-		return ApiResponse.<Category>builder()
+	public GenericResponse<Category> saveSubCategoryForCategory(@RequestBody SubCategory subCategory, @PathVariable Long id){
+		return GenericResponse.<Category>builder()
 				.code(200)
 				.status(HttpStatus.OK)
 				.data(categoryService.saveSubCategoryForCategory(subCategory,id))
@@ -93,8 +93,8 @@ public class CategoryController {
 
 
 	@GetMapping("/products/{id}")
-	public ApiResponse<List<ProductDto>> getAllProductsFromCategoryId(@PathVariable("id") Long id){
-		return ApiResponse.<List<ProductDto>>builder()
+	public GenericResponse<List<ProductDto>> getAllProductsFromCategoryId(@PathVariable("id") Long id){
+		return GenericResponse.<List<ProductDto>>builder()
 				.code(200)
 				.status(HttpStatus.OK)
 				.data(categoryService.getAllProductsFromCategoryId(id))

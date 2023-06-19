@@ -1,5 +1,6 @@
-package com.sachin.usermicroservice.service;
+package com.sachin.usermicroservice.service.implementations;
 
+import com.sachin.usermicroservice.service.OtpSender;
 import com.twilio.Twilio;
 import com.twilio.rest.api.v2010.account.Message;
 import com.twilio.type.PhoneNumber;
@@ -7,7 +8,7 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
 @Service
-public class TwilioService {
+public class TwilioService implements OtpSender {
     @Value("${twilio.ACCOUNT_SID}")
     private  String ACCOUNT_SID;
 
@@ -21,7 +22,6 @@ public class TwilioService {
         Twilio.init(ACCOUNT_SID, AUTH_TOKEN);
         Message message = Message.creator(new PhoneNumber(to), new PhoneNumber(FROM_NUMBER),
                 "Your OTP is " + otp).create();
-        System.out.println(message);
     }
 }
 

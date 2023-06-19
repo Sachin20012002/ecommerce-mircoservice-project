@@ -1,5 +1,5 @@
 server:
-  port: 9100
+  port: 9003
   servlet:
     context-path: /meesho/filter-microservice
 spring:
@@ -8,7 +8,7 @@ spring:
   kafka:
     bootstrap-servers: localhost:9092
     consumer:
-      group-id: myGroup
+      group-id: myGroup-1
       auto-offset-reset: earliest
       key-serializer: org.apache.kafka.common.serialization.StringSerializer
       value-serializer: org.apache.kafka.common.serialization.StringSerializer

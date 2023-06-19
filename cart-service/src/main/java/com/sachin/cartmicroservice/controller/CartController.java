@@ -9,6 +9,8 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+
 @RestController
 @RequiredArgsConstructor
 @RequestMapping("/carts")
@@ -40,4 +42,15 @@ public class CartController {
                 .status(HttpStatus.OK)
                 .data(cartService.getCartByCustomerToken(authorizationHeader.substring(7))).build();
     }
+
+    @GetMapping
+    public GenericResponse<List<Cart>> getAllCarts(){
+        return GenericResponse.<List<Cart>>builder()
+                .code(200)
+                .status(HttpStatus.OK)
+                .data(cartService.getAllCarts())
+                .build();
+    }
+
+
 }

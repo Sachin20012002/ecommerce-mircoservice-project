@@ -1,3 +1,4 @@
+
 logging:
     level:
         org:
@@ -9,7 +10,7 @@ logging:
                             BasicBinder:
                                 TRACE       #logs the parameters passed to preparedStatement
 server:
-    port: 9006
+    port: 9004
     servlet:
         context-path: /meesho/order-microservice
 
@@ -20,7 +21,7 @@ spring:
     application:
         name: ORDER-SERVICE
     datasource:
-        url: jdbc:mysql://localhost:3306/Order-Microservice
+        url: jdbc:mysql://localhost:3306/order-microservice
         username: root
         password: password
     jpa:

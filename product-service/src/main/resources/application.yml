@@ -28,12 +28,22 @@ spring:
 
     datasource:
         password: password
-        url: jdbc:mysql://localhost:3306/Product-Microservice
+        url: jdbc:mysql://localhost:3306/product-microservice
         username: root
 
+
+
     kafka:
+#        properties:
+#            retry:
+#                backoff:
+#                    ms: 10000
+#        template:
+#            send-timeout: 10000
         bootstrap-servers: localhost:9092
         producer:
+#            max-block-ms: 10000
+#            retries: 5
             key-serializer: org.apache.kafka.common.serialization.StringSerializer
             value-serializer: org.apache.kafka.common.serialization.StringSerializer
 

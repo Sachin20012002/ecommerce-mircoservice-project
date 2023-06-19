@@ -22,10 +22,10 @@ public class ChildCategoryService {
 	
 
 		private final ChildCategoryRepository childCategoryRepo;
+		private final GrpcService grpcService;
 
 
-		@GrpcClient("product-service")
-		private ProductServiceGrpc.ProductServiceBlockingStub productServiceBlockingStub;
+
 
 		
 		public ChildCategory saveChildCategory(ChildCategory childCategory) {
@@ -64,19 +64,7 @@ public class ChildCategoryService {
 
 
 	public List<ProductDto> getAllProductsByChildCategoryId(Long id){
-		return productServiceBlockingStub.getAllProductsByChildCategoryId(
-				ProductServiceRequest
-						.newBuilder()
-						.setChildCategoryId(id)
-						.build())
-				.getProductsList()
-				.stream()
-				.map(i-> ProductDto.builder().id(i.getId())
-					.name(i.getName())
-					.price(i.getPrice())
-					.imageUrl(i.getImageUrl())
-					.build())
-				.collect(Collectors.toList());
+		return grpcService.getAllProductsByChildCategoryId(id);
 	}
 
 

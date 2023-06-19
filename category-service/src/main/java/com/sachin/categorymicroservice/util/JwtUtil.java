@@ -1,4 +1,4 @@
-package com.sachin.usermicroservice.service;
+package com.sachin.categorymicroservice.util;
 
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;
@@ -16,14 +16,18 @@ import java.util.Map;
 import java.util.function.Function;
 
 @Service
-public class JwtService {
+public class JwtUtil {
 
   @Value("${jwt.secret_key}")
   private String SECRET_KEY;
 
+  @Value("${jwt.expiration_time}")
+  private Long EXPIRATION_TIME;
+
   public String extractUsername(String token) {
     return extractClaim(token, Claims::getSubject);
   }
+
 
   public <T> T extractClaim(String token, Function<Claims, T> claimsResolver) {
     final Claims claims = extractAllClaims(token);
@@ -43,7 +47,7 @@ public class JwtService {
         .setClaims(extraClaims)
         .setSubject(userDetails.getUsername())
         .setIssuedAt(new Date(System.currentTimeMillis()))
-        .setExpiration(new Date(System.currentTimeMillis() + 1000 *60 * 60 * 24)) //24 hours
+        .setExpiration(new Date(System.currentTimeMillis() + EXPIRATION_TIME)) //24 hours
         .signWith(getSignInKey(), SignatureAlgorithm.HS256)
         .compact();
   }

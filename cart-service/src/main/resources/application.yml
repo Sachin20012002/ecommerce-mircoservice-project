@@ -1,5 +1,25 @@
+server:
+  port: 9006
+  servlet:
+    context-path: /meesho/cart-microservice
+
 spring:
+  application:
+    name: CART-SERVICE
   data:
     mongodb:
       uri: mongodb://admin:password@localhost:27017/cart-service?authSource=admin&authMechanism=SCRAM-SHA-256
 
+  kafka:
+    bootstrap-servers: localhost:9092
+    producer:
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: org.apache.kafka.common.serialization.StringSerializer
+    consumer:
+      group-id: myGroup-1
+      auto-offset-reset: earliest
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: org.apache.kafka.common.serialization.StringSerializer
+
+jwt:
+  secret_key: 404E635266556A586E3272357538782F413F4428472B4B6250645367566B5970
