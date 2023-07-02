@@ -2,7 +2,6 @@ package com.codingmart.productmicroservice.entity;
 
 import com.codingmart.productmicroservice.audit.Auditable;
 import lombok.*;
-import org.hibernate.Hibernate;
 import org.hibernate.annotations.Where;
 
 import javax.persistence.*;
@@ -86,19 +85,16 @@ public class Product extends Auditable<String> {
     @ToString.Exclude
     List<ProductDetail> productDetails;
 
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
-        if (o == null || Hibernate.getClass(this) != Hibernate.getClass(o)) return false;
-        Product product = (Product) o;
-        return id != null && Objects.equals(id, product.id);
+        if (!(o instanceof Product product)) return false;
+        return Objects.equals(getId(), product.getId());
     }
 
     @Override
     public int hashCode() {
-        return getClass().hashCode();
+        return Objects.hash(getId());
     }
-
-
-
 }

@@ -17,12 +17,5 @@ import org.springframework.web.bind.annotation.RestController;
 public class PaymentController {
     private final PaymentService paymentService;
 
-    @PostMapping("/{paymentType}")
-    public GenericResponse<Payment> createPayment(@PathVariable PaymentType paymentType){
-        return GenericResponse.<Payment>builder()
-                .code(201)
-                .status(HttpStatus.CREATED)
-                .data(paymentService.createPayment(paymentType))
-                .build();
-    }
+
 }

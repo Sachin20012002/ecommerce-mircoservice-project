@@ -2,7 +2,6 @@ package com.codingmart.productmicroservice.entity;
 
 
 import lombok.*;
-import org.hibernate.Hibernate;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -27,9 +26,9 @@ public class ProductCode {
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
-        if (o == null || Hibernate.getClass(this) != Hibernate.getClass(o)) return false;
+        if (o == null || getClass() != o.getClass()) return false;
         ProductCode that = (ProductCode) o;
-        return id != null && Objects.equals(id, that.id);
+        return Objects.equals(getId(), that.getId());
     }
 
     @Override

@@ -1,4 +1,4 @@
-package com.sachin.categorymicroservice.util;
+package com.codingmart.productmicroservice.util;
 
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;

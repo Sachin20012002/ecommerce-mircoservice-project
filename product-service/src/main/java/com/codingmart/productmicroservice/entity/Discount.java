@@ -3,8 +3,6 @@ package com.codingmart.productmicroservice.entity;
 
 import com.codingmart.productmicroservice.audit.Auditable;
 import lombok.*;
-import org.hibernate.Hibernate;
-
 import javax.persistence.*;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
@@ -35,13 +33,12 @@ public class Discount extends Auditable<String> {
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
-        if (o == null || Hibernate.getClass(this) != Hibernate.getClass(o)) return false;
-        Discount discount = (Discount) o;
-        return id != null && Objects.equals(id, discount.id);
+        if (!(o instanceof Discount discount)) return false;
+        return Objects.equals(getId(), discount.getId()) && Objects.equals(getName(), discount.getName()) && Objects.equals(getPercent(), discount.getPercent()) && Objects.equals(getActive(), discount.getActive());
     }
 
     @Override
     public int hashCode() {
-        return getClass().hashCode();
+        return Objects.hash(getId(), getName(), getPercent(), getActive());
     }
 }

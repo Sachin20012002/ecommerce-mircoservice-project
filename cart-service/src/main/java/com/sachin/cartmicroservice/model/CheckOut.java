@@ -14,8 +14,6 @@ import org.springframework.data.mongodb.core.mapping.Document;
 public class CheckOut {
     @Id
     private String id;
-    @DBRef
-    private Cart cart;
     private String shippingAddressId;
     @DBRef
     private Payment payment;

@@ -17,16 +17,21 @@ public class CartServiceImpl implements CartService {
    private final CartRepository cartRepository;
    private final CartItemService cartItemService;
    private final JwtService jwtService;
+
+   public Cart save(Cart cart){
+       return cartRepository.save(cart);
+   }
+
    @Override
    public Cart addProductToCart(CartItem cartItem,String cartId) {
          Cart cart=cartRepository.findById(cartId).orElseThrow(()-> new NotFoundException("CartId not found"));
          cart.getCartItems().add(cartItemService.save(cartItem));
-         return cartRepository.save(cart);
+         return save(cart);
    }
 
     @Override
     public Cart initialiseCartToCustomer(String customerId) {
-        return cartRepository.findById(customerId).orElse(cartRepository.save(Cart.builder()
+        return cartRepository.findById(customerId).orElse(save(Cart.builder()
                 .customerId(customerId)
                 .cartItems(new ArrayList<>())
                 .build()));

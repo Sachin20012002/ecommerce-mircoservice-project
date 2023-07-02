@@ -1,2 +1,6 @@
 Implement the spring security in all microservices
-    Completed Spring security in -> user-service, category-service
+    Completed Spring security in -> user-service, category-service, product.
+
+Complete the payment process in order-service
+
+add loggers across the microservice

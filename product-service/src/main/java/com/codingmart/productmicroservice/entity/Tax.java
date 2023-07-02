@@ -3,7 +3,6 @@ package com.codingmart.productmicroservice.entity;
 
 import com.codingmart.productmicroservice.audit.Auditable;
 import lombok.*;
-import org.hibernate.Hibernate;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotBlank;
@@ -34,9 +33,9 @@ public class Tax extends Auditable<String> {
    @Override
    public boolean equals(Object o) {
       if (this == o) return true;
-      if (o == null || Hibernate.getClass(this) != Hibernate.getClass(o)) return false;
+      if (o == null || getClass() != o.getClass()) return false;
       Tax tax = (Tax) o;
-      return id != null && Objects.equals(id, tax.id);
+      return Objects.equals(getId(), tax.getId());
    }
 
    @Override

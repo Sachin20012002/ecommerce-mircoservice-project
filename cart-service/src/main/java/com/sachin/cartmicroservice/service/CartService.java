@@ -6,6 +6,7 @@ import com.sachin.cartmicroservice.model.CartItem;
 import java.util.List;
 
 public interface CartService {
+    Cart save(Cart cart);
     Cart addProductToCart(CartItem cartItem, String cartId);
 
     Cart initialiseCartToCustomer(String customerId);

@@ -3,7 +3,6 @@ package com.codingmart.productmicroservice.entity;
 
 import com.codingmart.productmicroservice.audit.Auditable;
 import lombok.*;
-import org.hibernate.Hibernate;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -32,12 +31,12 @@ public class Size extends Auditable<String> {
     @NotNull(message = "Provide active status")
     private Boolean active;
 
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
-        if (o == null || Hibernate.getClass(this) != Hibernate.getClass(o)) return false;
-        Size size = (Size) o;
-        return id != null && Objects.equals(id, size.id);
+        if (!(o instanceof Size size)) return false;
+        return Objects.equals(getId(), size.getId());
     }
 
     @Override
