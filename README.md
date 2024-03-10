@@ -41,3 +41,7 @@ mvn clean install
 ## License
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
+## Contact
+For inquiries, you can reach me at [sachin.s.developer@gmail.com](mailto:sachin.s.developer@gmail.com).
+
+
