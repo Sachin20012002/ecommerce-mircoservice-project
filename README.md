@@ -37,3 +37,7 @@ mvn clean install
 ## Contributing
 - The order management feature is not fully completed.
 - Contributions are welcome for improving best practices, features, and functionalities.
+
+## License
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
