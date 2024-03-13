@@ -5,32 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="838bbe56-6c01-4a5c-9dce-c83fc228073e" name="Changes" comment="commit">
-      <change afterPath="$PROJECT_DIR$/product-service/src/main/java/com/codingmart/productmicroservice/config/ApplicationConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/product-service/src/main/java/com/codingmart/productmicroservice/config/SecurityConfiguration.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/product-service/src/main/java/com/codingmart/productmicroservice/exception/JwtTokenException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/product-service/src/main/java/com/codingmart/productmicroservice/filter/ExceptionHandlerFilter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/product-service/src/main/java/com/codingmart/productmicroservice/filter/JwtAuthenticationFilter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/product-service/src/main/java/com/codingmart/productmicroservice/util/JwtUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Eccomerce.postman_collection.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Steps to follow before starting all the services" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/product-service/src/main/java/com/codingmart/productmicroservice/config/OpenApiConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TODO" beforeDir="false" afterPath="$PROJECT_DIR$/TODO" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cart-service/src/main/java/com/sachin/cartmicroservice/controller/CheckOutController.java" beforeDir="false" afterPath="$PROJECT_DIR$/cart-service/src/main/java/com/sachin/cartmicroservice/controller/CheckOutController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cart-service/src/main/java/com/sachin/cartmicroservice/controller/PaymentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/cart-service/src/main/java/com/sachin/cartmicroservice/controller/PaymentController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cart-service/src/main/java/com/sachin/cartmicroservice/model/CheckOut.java" beforeDir="false" afterPath="$PROJECT_DIR$/cart-service/src/main/java/com/sachin/cartmicroservice/model/CheckOut.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cart-service/src/main/java/com/sachin/cartmicroservice/service/CartService.java" beforeDir="false" afterPath="$PROJECT_DIR$/cart-service/src/main/java/com/sachin/cartmicroservice/service/CartService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cart-service/src/main/java/com/sachin/cartmicroservice/service/CartServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/cart-service/src/main/java/com/sachin/cartmicroservice/service/CartServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cart-service/src/main/java/com/sachin/cartmicroservice/service/CheckOutService.java" beforeDir="false" afterPath="$PROJECT_DIR$/cart-service/src/main/java/com/sachin/cartmicroservice/service/CheckOutService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cart-service/src/main/java/com/sachin/cartmicroservice/service/CheckOutServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/cart-service/src/main/java/com/sachin/cartmicroservice/service/CheckOutServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/category-service/src/main/java/com/sachin/categorymicroservice/util/JwtUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/category-service/src/main/java/com/sachin/categorymicroservice/util/JwtUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/filter-service/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/filter-service/src/main/resources/application.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/product-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/product-service/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/product-service/src/main/java/com/codingmart/productmicroservice/controller/TaxController.java" beforeDir="false" afterPath="$PROJECT_DIR$/product-service/src/main/java/com/codingmart/productmicroservice/controller/TaxController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/product-service/src/main/java/com/codingmart/productmicroservice/controller/TypeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/product-service/src/main/java/com/codingmart/productmicroservice/controller/TypeController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/product-service/src/main/java/com/codingmart/productmicroservice/entity/Discount.java" beforeDir="false" afterPath="$PROJECT_DIR$/product-service/src/main/java/com/codingmart/productmicroservice/entity/Discount.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/product-service/src/main/java/com/codingmart/productmicroservice/entity/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/product-service/src/main/java/com/codingmart/productmicroservice/entity/Product.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/product-service/src/main/java/com/codingmart/productmicroservice/entity/ProductCode.java" beforeDir="false" afterPath="$PROJECT_DIR$/product-service/src/main/java/com/codingmart/productmicroservice/entity/ProductCode.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/product-service/src/main/java/com/codingmart/productmicroservice/entity/Size.java" beforeDir="false" afterPath="$PROJECT_DIR$/product-service/src/main/java/com/codingmart/productmicroservice/entity/Size.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/product-service/src/main/java/com/codingmart/productmicroservice/entity/Tax.java" beforeDir="false" afterPath="$PROJECT_DIR$/product-service/src/main/java/com/codingmart/productmicroservice/entity/Tax.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/product-service/src/main/java/com/codingmart/productmicroservice/service/BrandServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/product-service/src/main/java/com/codingmart/productmicroservice/service/BrandServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/com/sachin/usermicroservice/enums/Role.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/java/com/sachin/usermicroservice/enums/Role.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/product-service/src/main/java/com/codingmart/productmicroservice/service/grpc/GrpcProductService.java" beforeDir="false" afterPath="$PROJECT_DIR$/product-service/src/main/java/com/codingmart/productmicroservice/service/grpc/GrpcProductService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/product-service/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/product-service/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/proto/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/proto/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/Steps to follow before starting user-service" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -73,18 +57,14 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
-  <component name="MavenImportPreferences">
-    <option name="generalSettings">
-      <MavenGeneralSettings>
-        <option name="useMavenConfig" value="true" />
-      </MavenGeneralSettings>
-    </option>
-  </component>
   <component name="ProblemsViewState">
     <option name="proportion" value="0.33411214" />
     <option name="selectedTabId" value="CurrentFile" />
     <option name="showPreview" value="true" />
   </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 6
+}</component>
   <component name="ProjectId" id="2OrQLJwbmCoJku5HDi3n64YGkFq" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -96,6 +76,19 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "ASKED_ADD_EXTERNAL_FILES": "true",
+    "Application.ApiGatewayApplication.executor": "Run",
+    "Application.CartServiceApplication.executor": "Run",
+    "Application.CategoryServiceApplication.executor": "Run",
+    "Application.CloudConfigServerApplication.executor": "Run",
+    "Application.FilterServiceApplication.executor": "Run",
+    "Application.ProductServiceApplication.executor": "Run",
+    "Application.ServiceRegistryApplication.executor": "Run",
+    "Application.UserServiceApplication.executor": "Run",
+    "Maven.product-service [clean].executor": "Run",
+    "Maven.product-service [install].executor": "Run",
+    "Maven.proto [clean].executor": "Run",
+    "Maven.proto [compile].executor": "Run",
+    "Maven.proto [install].executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
@@ -103,6 +96,7 @@
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
     "git-widget-placeholder": "master",
     "jdk.selected.JAVA_MODULE": "corretto-17",
+    "kotlin-language-version-configured": "true",
     "last_opened_file_path": "/home/sachin/IdeaProjects/ecommerce-mircoservice-project/product-service/src/main/java/com/codingmart/productmicroservice",
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.15",
@@ -128,6 +122,9 @@
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
     </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+    </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="com.sachin.usermicroservice.service" />
     </key>
@@ -142,13 +139,13 @@
       <recent name="com.sachin.cartmicroservice.service.grpc" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.CategoryServiceApplication">
-    <configuration name="ApiGatewayApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.sachin.api.gateway.ApiGatewayApplication" />
-      <module name="api-gateway" />
+  <component name="RunManager" selected="Application.FilterServiceApplication">
+    <configuration name="CartServiceApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.sachin.cartmicroservice.CartServiceApplication" />
+      <module name="cart-service" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.sachin.api.gateway.*" />
+          <option name="PATTERN" value="com.sachin.cartmicroservice.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -169,12 +166,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CloudConfigServerApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.sachin.cloud.CloudConfigServerApplication" />
-      <module name="cloud-config-server" />
+    <configuration name="FilterServiceApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.sachin.filterservice.FilterServiceApplication" />
+      <module name="filter-service" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.sachin.cloud.*" />
+          <option name="PATTERN" value="com.sachin.filterservice.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -182,12 +179,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ServiceRegistryApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.codingmart.serviceregistry.ServiceRegistryApplication" />
-      <module name="service-registry" />
+    <configuration name="ProductServiceApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.codingmart.productmicroservice.ProductServiceApplication" />
+      <module name="product-service" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.codingmart.serviceregistry.*" />
+          <option name="PATTERN" value="com.codingmart.productmicroservice.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -210,13 +207,20 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.CategoryServiceApplication" />
+        <item itemvalue="Application.FilterServiceApplication" />
+        <item itemvalue="Application.CartServiceApplication" />
         <item itemvalue="Application.UserServiceApplication" />
-        <item itemvalue="Application.ApiGatewayApplication" />
-        <item itemvalue="Application.CloudConfigServerApplication" />
-        <item itemvalue="Application.ServiceRegistryApplication" />
+        <item itemvalue="Application.CategoryServiceApplication" />
+        <item itemvalue="Application.ProductServiceApplication" />
       </list>
     </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="jdk-17.0.10-corretto-17.0.10-f644763e9732-f00315f9" />
+      </set>
+    </attachedChunks>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -262,7 +266,15 @@
       <option name="project" value="LOCAL" />
       <updated>1687175367123</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="commit">
+      <option name="closed" value="true" />
+      <created>1710080603243</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1710080603243</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="UnknownFeatures">

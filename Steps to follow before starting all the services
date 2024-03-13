@@ -1,0 +1,18 @@
+Software to install:
+1) Mysql
+2) MongoDB
+3) elastic search ( v - 7.17.18 )
+4) kafka (v - 2.12-3.7.0)
+
+
+Create DB Schema in mysql:
+1) product-microservice
+2) category-microservice
+
+Make sure all the software are available and active
+(kafka, elastic search, mongoDB, mysql)
+
+1) Start the Service Registry application.
+2) Start the cloud config
+3) Start the Api-gateway
+4) Then, start all the other services.

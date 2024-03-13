@@ -1,0 +1,1333 @@
+{
+	"info": {
+		"_postman_id": "f150638e-c979-404c-a4d8-e8ff968085dc",
+		"name": "Eccomerce",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "23651249",
+		"_collection_link": "https://restless-meteor-173035.postman.co/workspace/My-Workspace~75dc910a-8d81-4660-802f-0ac022d2e72d/collection/23651249-f150638e-c979-404c-a4d8-e8ff968085dc?action=share&source=collection_link&creator=23651249"
+	},
+	"item": [
+		{
+			"name": "Product-Microservice",
+			"item": [
+				{
+					"name": "Brand Copy",
+					"item": [
+						{
+							"name": "deleteBrand",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "localhost:8080/meesho/brands/2",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"meesho",
+										"brands",
+										"2"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "addBrand",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"name\":\"Nike\",\n    \"active\":\"true\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "192.168.1.139:9191/meesho-productmicroservice/brands",
+									"host": [
+										"192",
+										"168",
+										"1",
+										"139"
+									],
+									"port": "9191",
+									"path": [
+										"meesho-productmicroservice",
+										"brands"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "updateBrand",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8080/meesho/brands/2",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"meesho",
+										"brands",
+										"2"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "getBrand",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "192.168.1.139:9191/meesho-productmicroservice/brands/1",
+									"host": [
+										"192",
+										"168",
+										"1",
+										"139"
+									],
+									"port": "9191",
+									"path": [
+										"meesho-productmicroservice",
+										"brands",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "getAllBrands",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:8080/meesho/brands",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"meesho",
+										"brands"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Product Copy",
+					"item": [
+						{
+							"name": "saveProduct",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n   \n            \"name\": \"mor pigment blue\",\n            \"price\": 448.0,\n            \"maximumRetailPrice\": 478.91200000000003,\n            \"finalDiscountedPrice\": 448.0,\n            \"quantity\": 2,\n            \"color\": \"red\",\n            \"description\": \"none\",\n            \"childCategoryId\": 1,\n            \"supplierId\": 1,\n            \"brand\": {\n                \"name\": \"mor pigment\",\n                \"active\": true\n            },\n            \"discount\": {\n                \"name\":\"50% offer\",\n                \"percent\":50,\n                \"active\":true\n            },\n            \"active\": true,\n            \"taxes\": [\n                {\n                    \"name\": \"gst\",\n                    \"percent\": 3.5,\n                    \"active\": true\n                },\n                {\n                    \"name\": \"cgst\",\n                    \"percent\": 3.4,\n                    \"active\": true\n                }\n            ],\n            \"availableSizes\": [\n                {\n                    \"name\": \"free\",\n                    \"quantity\": 2,\n                    \"active\": true\n                }\n            ],\n            \"images\": [\n                {\n\n                    \"name\": \"mor pigment green front view\",\n                    \"url\": \"https://drive.google.com/file/d/1YzjYo8OHGtV5-GNfHtqyhf5bHmlPtg-a/view?usp=sharing\",\n                    \"active\": true\n                }\n            ],\n            \"type\": {\n                \"name\": \"party-wear\",\n                \"active\": true\n            },\n            \"productDetails\": [\n                {   \n                    \"name\": \"Saree Fabric\",\n                    \"value\": \"Satin Silk\"\n                },\n                {\n                    \"name\": \"Blouse\",\n                    \"value\": \"Separate Blouse Piece\"\n                }\n            ]\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:9191/meesho/product-microservice/products",
+									"host": [
+										"localhost"
+									],
+									"port": "9191",
+									"path": [
+										"meesho",
+										"product-microservice",
+										"products"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "DeleteProduct",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "localhost:9002/meesho/product-microservice/products/1",
+									"host": [
+										"localhost"
+									],
+									"port": "9002",
+									"path": [
+										"meesho",
+										"product-microservice",
+										"products",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "updateProduct",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n   \n            \"name\": \"mor pigment green\",\n            \"price\": 448.0,\n            \"maximumRetailPrice\": 478.91200000000003,\n            \"finalDiscountedPrice\": 448.0,\n            \"quantity\": 2,\n            \"color\": \"green\",\n            \"description\": \"none\",\n            \"childCategoryId\": 1,\n            \"supplierId\": 1,\n            \"brand\": {\n                \"name\": \"mor pigment\",\n                \"active\": true\n            },\n            \"discount\": null,\n            \"active\": true,\n            \"taxes\": [\n                {\n                    \"name\": \"gst\",\n                    \"percent\": 3.5,\n                    \"active\": true\n                },\n                {\n                    \"name\": \"cgst\",\n                    \"percent\": 3.4,\n                    \"active\": true\n                }\n            ],\n            \"availableSizes\": [\n                {\n                    \"name\": \"small\",\n                    \"quantity\": 4,\n                    \"active\": true\n                }\n            ],\n            \"discount\":{\n\n                \"name\":\"50% offer\",\n                \"percent\":\"50\",\n                \"active\":\"true\"\n            },\n            \"images\": [\n                {\n\n                    \"name\": \"mor pigment green back view\",\n                    \"url\": \"https://drive.google.com/file/d/1YzjYo8OHGtV5-GNfHtqyhf5bHmlPtg-a/view?usp=sharing\",\n                    \"active\": false\n                }\n            ],\n            \"type\": {\n                \"name\": \"party-wear\",\n                \"active\": true\n            },\n            \"productDetails\": [\n                {  \n                    \"name\": \"Saree Fabric\",\n                    \"value\": \"Satin Silk\"\n                },\n                {\n                    \"name\":\"check\",\n                    \"value\":\"check\"\n                }\n            ]\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:9002/meesho-productmicroservice/products/22",
+									"host": [
+										"localhost"
+									],
+									"port": "9002",
+									"path": [
+										"meesho-productmicroservice",
+										"products",
+										"22"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "getProductById",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:9002/meesho-productmicroservice/products/22",
+									"host": [
+										"localhost"
+									],
+									"port": "9002",
+									"path": [
+										"meesho-productmicroservice",
+										"products",
+										"22"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "getAllProducts",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:9191/meesho/product-microservice/products",
+									"host": [
+										"localhost"
+									],
+									"port": "9191",
+									"path": [
+										"meesho",
+										"product-microservice",
+										"products"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "getAllActiveProducts",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:8080/meesho/products/active",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"meesho",
+										"products",
+										"active"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "getAllActiveProductsByChildCategoryId",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "sachin-latitude-3520:9191/meesho/product-microservice/products/child-category/1",
+									"host": [
+										"sachin-latitude-3520"
+									],
+									"port": "9191",
+									"path": [
+										"meesho",
+										"product-microservice",
+										"products",
+										"child-category",
+										"1"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Size Copy",
+					"item": [
+						{
+							"name": "deleteSize",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "localhost:8080/size/8",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"size",
+										"8"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "addSize",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"name\":\"S28\",\n    \"active\":\"true\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8080/meesho/sizes",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"meesho",
+										"sizes"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "updateSize",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{   \n\n    \"name\":\"S28\",\n    \"active\":\"false\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8080/meesho/sizes/2",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"meesho",
+										"sizes",
+										"2"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "getSizeById",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:8080/meesho/sizes/2",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"meesho",
+										"sizes",
+										"2"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "getAllSizes",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:8080/meesho/sizes",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"meesho",
+										"sizes"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Tax Copy",
+					"item": [
+						{
+							"name": "deleteTax",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "localhost:8080/meesho/taxes/1",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"meesho",
+										"taxes",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "updateTax",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"id\": 2,\n    \"name\": \"cgst\",\n    \"percent\": 3.4,\n    \"active\": false\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8080/meesho/taxes/1",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"meesho",
+										"taxes",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "getTaxById",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:8080/meesho/taxes/1",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"meesho",
+										"taxes",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "addTax",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"id\": 1,\n    \"name\": \"gst\",\n    \"percent\": 3,\n    \"active\": false\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8080/meesho/taxes",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"meesho",
+										"taxes"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "getAllTaxes",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:8080/meesho/taxes",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"meesho",
+										"taxes"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Image Copy",
+					"item": [
+						{
+							"name": "deleteImage",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "localhost:8080/image/6",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"image",
+										"6"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "addImage",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"name\":\"book\",\n    \"active\":\"true\",\n    \"url\":\"https://www.google.com/search?q=image+of+book&oq=image+of+book&aqs=chrome..69i57j0i512l9.3240j0j7&sourceid=chrome&ie=UTF-8#imgrc=VK9InBS4mPuRcM\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:9002/meesho-productmicroservice/images",
+									"host": [
+										"localhost"
+									],
+									"port": "9002",
+									"path": [
+										"meesho-productmicroservice",
+										"images"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "updateImage",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"name\":\"book1\",\n    \"active\":\"True\",\n    \"url\":\"https://www.google.com/search?q=image+of+book&oq=image+of+book&aqs=chrome..69i57j0i512l9.3240j0j7&sourceid=chrome&ie=UTF-8#imgrc=VK9InBS4mPuRcM\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:9002/meesho-productmicroservice/images/16",
+									"host": [
+										"localhost"
+									],
+									"port": "9002",
+									"path": [
+										"meesho-productmicroservice",
+										"images",
+										"16"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "getImageById",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:8080/meesho/images/4",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"meesho",
+										"images",
+										"4"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "getAllImages",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:8080/meesho/images",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"meesho",
+										"images"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Type Copy",
+					"item": [
+						{
+							"name": "getTypeById",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:8080/meesho/types/1",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"meesho",
+										"types",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "getAllTypes",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:8080/meesho/types",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"meesho",
+										"types"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "addType",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"name\":\"Sports Shoe\",\n    \"active\":\"true\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8080/meesho/types",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"meesho",
+										"types"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "updateType",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"name\":\"comic\",\n    \"active\":\"false\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8080/meesho/types/1",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"meesho",
+										"types",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "New Request",
+							"request": {
+								"method": "GET",
+								"header": []
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Discount Copy",
+					"item": [
+						{
+							"name": "addDiscount",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"name\":\"50% offer\",\n    \"percent\":\"50\",\n    \"active\":\"true\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8080/meesho/discounts",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"meesho",
+										"discounts"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "getAllDiscounts",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:8080/meesho/discounts",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"meesho",
+										"discounts"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "getDiscountById",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:9002/meesho-productmicroservice/discounts/1",
+									"host": [
+										"localhost"
+									],
+									"port": "9002",
+									"path": [
+										"meesho-productmicroservice",
+										"discounts",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "deleteDiscount",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "localhost:8080/meesho/discounts/1",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"meesho",
+										"discounts",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "updateDiscount",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"name\":\"50% offer\",\n    \"percent\":\"50\",\n    \"active\":\"false\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8080/meesho/discounts/2",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"meesho",
+										"discounts",
+										"2"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Filter Copy",
+					"item": [
+						{
+							"name": "filterByColor",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "sachin-latitude-3520:9191/meesho/filter-microservice/filters/color/green",
+									"host": [
+										"sachin-latitude-3520"
+									],
+									"port": "9191",
+									"path": [
+										"meesho",
+										"filter-microservice",
+										"filters",
+										"color",
+										"green"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Category-Microservice",
+			"item": [
+				{
+					"name": "getAllProducts By child Category Id Copy",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:9191/meesho/category-microservice/child-categories/products/1",
+							"host": [
+								"localhost"
+							],
+							"port": "9191",
+							"path": [
+								"meesho",
+								"category-microservice",
+								"child-categories",
+								"products",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get all categories Copy",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:9191/meesho/category-microservice/categories",
+							"host": [
+								"localhost"
+							],
+							"port": "9191",
+							"path": [
+								"meesho",
+								"category-microservice",
+								"categories"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Order-Microservice",
+			"item": [
+				{
+					"name": "Place order Copy",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"customerId\":1,\n    \"shippingAddressId\":1,\n    \"billingAddressId\":1\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:9006/meesho/order-microservice/orders",
+							"host": [
+								"localhost"
+							],
+							"port": "9006",
+							"path": [
+								"meesho",
+								"order-microservice",
+								"orders"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "New Request Copy",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"paymentId\":\"1\",\n    \"amount\":\"1.0\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:9006/meesho/order-microservice/payment/create",
+							"host": [
+								"localhost"
+							],
+							"port": "9006",
+							"path": [
+								"meesho",
+								"order-microservice",
+								"payment",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "New Request Copy",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "User-Service",
+			"item": [
+				{
+					"name": "getAllUsers Copy",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJjdXN0b21lcklkIjoiNjQ4YjFmY2M5NmQwNTU2Zjg2NTI5YzM2Iiwic3ViIjoiNjQ4YjFmY2M5NmQwNTU2Zjg2NTI5YzM1IiwiaWF0IjoxNjg2ODM5MjU5LCJleHAiOjE2ODY5MjU2NTl9.0FT7DxKeYn4IzEb-Q-2SZL9jrNLOpIqIQT28LIXq-wA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:9191/meesho/user-microservice/users",
+							"host": [
+								"localhost"
+							],
+							"port": "9191",
+							"path": [
+								"meesho",
+								"user-microservice",
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "signup Copy",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"phoneNumber\":\"+919940491149\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:9191/meesho/user-microservice/signup",
+							"host": [
+								"localhost"
+							],
+							"port": "9191",
+							"path": [
+								"meesho",
+								"user-microservice",
+								"signup"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "login Copy",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"phoneNumber\":\"+919940491149\",\n    \"otp\":\"087998\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:9191/meesho/user-microservice/login",
+							"host": [
+								"localhost"
+							],
+							"port": "9191",
+							"path": [
+								"meesho",
+								"user-microservice",
+								"login"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Filter-Service",
+			"item": [
+				{
+					"name": "getAllProducts Copy",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:9100/meesho/filter-microservice/products",
+							"host": [
+								"localhost"
+							],
+							"port": "9100",
+							"path": [
+								"meesho",
+								"filter-microservice",
+								"products"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "findByBrand Copy",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:9100/meesho/filter-microservice/products/brand/mor pigment",
+							"host": [
+								"localhost"
+							],
+							"port": "9100",
+							"path": [
+								"meesho",
+								"filter-microservice",
+								"products",
+								"brand",
+								"mor pigment"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "findByColor Copy",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:9191/meesho/filter-microservice/products/color/red",
+							"host": [
+								"localhost"
+							],
+							"port": "9191",
+							"path": [
+								"meesho",
+								"filter-microservice",
+								"products",
+								"color",
+								"red"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "findByTypeName Copy",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:9191/meesho/filter-microservice/products/type/party-wear",
+							"host": [
+								"localhost"
+							],
+							"port": "9191",
+							"path": [
+								"meesho",
+								"filter-microservice",
+								"products",
+								"type",
+								"party-wear"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Cart Service",
+			"item": [
+				{
+					"name": "Initialise Cart Copy",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/initialiseCart/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"initialiseCart",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add product to Cart Copy",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"productId\":\"1\",\n    \"quantity\":\"1\",\n    \"variation\":\"small\",\n    \"supplierId\":\"1\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/addToCart/6458dd92aa80fe267bcac087",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"addToCart",
+								"6458dd92aa80fe267bcac087"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get all carts Copy",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:9191/meesho/cart-microservice/carts",
+							"host": [
+								"localhost"
+							],
+							"port": "9191",
+							"path": [
+								"meesho",
+								"cart-microservice",
+								"carts"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get Cart by Token Copy",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI2NDY0YmJlODcyNGFiODViZmIxOWQ1NTkiLCJpYXQiOjE2ODQzMjM0MDEsImV4cCI6MTY4NDQwOTgwMX0.FXc1yiBE-ixjXmz1xE-0bEK4fgTBy-_LLhqC7BQtK8o",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:9191/meesho/cart-microservice/carts/token",
+							"host": [
+								"localhost"
+							],
+							"port": "9191",
+							"path": [
+								"meesho",
+								"cart-microservice",
+								"carts",
+								"token"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

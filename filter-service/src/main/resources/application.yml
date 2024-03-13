@@ -16,7 +16,6 @@ spring:
     elasticsearch:
       cluster-name: elasticsearch
       cluster-nodes: localhost:9300
-
 logging:
   level:
     org.springframework.data.elasticsearch.client: DEBUG
