@@ -4,17 +4,22 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="838bbe56-6c01-4a5c-9dce-c83fc228073e" name="Changes" comment="commit">
-      <change afterPath="$PROJECT_DIR$/Eccomerce.postman_collection.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Steps to follow before starting all the services" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/product-service/src/main/java/com/codingmart/productmicroservice/config/OpenApiConfig.java" afterDir="false" />
+    <list default="true" id="838bbe56-6c01-4a5c-9dce-c83fc228073e" name="Changes" comment="updated POM, added steps to start the application and added postman collections.">
+      <change afterPath="$PROJECT_DIR$/cart-service/src/main/java/com/sachin/cartmicroservice/config/OpenAPIConfiguration.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/category-service/src/main/java/com/sachin/categorymicroservice/config/OpenAPIConfiguration.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/filter-service/src/main/java/com/sachin/filterservice/config/OpenAPIConfiguration.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/order-service/src/main/java/com/sachin/ordermicroservice/config/OpenAPIConfiguration.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/product-service/src/main/java/com/codingmart/productmicroservice/config/OpenAPIConfiguration.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user-service/src/main/java/com/sachin/usermicroservice/config/OpenAPIConfiguration.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/filter-service/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/filter-service/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/product-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/product-service/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/product-service/src/main/java/com/codingmart/productmicroservice/service/grpc/GrpcProductService.java" beforeDir="false" afterPath="$PROJECT_DIR$/product-service/src/main/java/com/codingmart/productmicroservice/service/grpc/GrpcProductService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/product-service/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/product-service/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/proto/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/proto/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user-service/Steps to follow before starting user-service" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Steps to follow before starting all the services" beforeDir="false" afterPath="$PROJECT_DIR$/Steps to follow before starting all the services" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cart-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/cart-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/category-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/category-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/filter-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/filter-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/order-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/order-service/src/main/java/com/sachin/ordermicroservice/config/RazorPayClientConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/product-service/src/main/java/com/codingmart/productmicroservice/config/OpenApiConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -81,6 +86,7 @@
     "Application.CategoryServiceApplication.executor": "Run",
     "Application.CloudConfigServerApplication.executor": "Run",
     "Application.FilterServiceApplication.executor": "Run",
+    "Application.OrderServiceApplication.executor": "Run",
     "Application.ProductServiceApplication.executor": "Run",
     "Application.ServiceRegistryApplication.executor": "Run",
     "Application.UserServiceApplication.executor": "Run",
@@ -97,7 +103,7 @@
     "git-widget-placeholder": "master",
     "jdk.selected.JAVA_MODULE": "corretto-17",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "/home/sachin/IdeaProjects/ecommerce-mircoservice-project/product-service/src/main/java/com/codingmart/productmicroservice",
+    "last_opened_file_path": "/home/sachin/MyProjects/swagger (1)/swagger",
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
@@ -132,33 +138,20 @@
       <recent name="com.sachin.usermicroservice.service" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="com.codingmart.productmicroservice.exception" />
-      <recent name="com.sachin.categorymicroservice.exception" />
-      <recent name="com.sachin.usermicroservice.exception" />
-      <recent name="com.sachin.cartmicroservice.dto" />
-      <recent name="com.sachin.cartmicroservice.service.grpc" />
+      <recent name="com.sachin.ordermicroservice.config" />
+      <recent name="com.sachin.filterservice.config" />
+      <recent name="com.sachin.cartmicroservice.config" />
+      <recent name="com.sachin.usermicroservice.config" />
+      <recent name="com.codingmart.productmicroservice.config" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.FilterServiceApplication">
-    <configuration name="CartServiceApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.sachin.cartmicroservice.CartServiceApplication" />
-      <module name="cart-service" />
+  <component name="RunManager" selected="Application.ApiGatewayApplication">
+    <configuration name="ApiGatewayApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.sachin.api.gateway.ApiGatewayApplication" />
+      <module name="api-gateway" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.sachin.cartmicroservice.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="CategoryServiceApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.sachin.categorymicroservice.CategoryServiceApplication" />
-      <module name="category-service" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.sachin.categorymicroservice.*" />
+          <option name="PATTERN" value="com.sachin.api.gateway.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -172,6 +165,19 @@
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.sachin.filterservice.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="OrderServiceApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.sachin.ordermicroservice.OrderServiceApplication" />
+      <module name="order-service" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.sachin.ordermicroservice.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -207,10 +213,10 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.ApiGatewayApplication" />
         <item itemvalue="Application.FilterServiceApplication" />
-        <item itemvalue="Application.CartServiceApplication" />
+        <item itemvalue="Application.OrderServiceApplication" />
         <item itemvalue="Application.UserServiceApplication" />
-        <item itemvalue="Application.CategoryServiceApplication" />
         <item itemvalue="Application.ProductServiceApplication" />
       </list>
     </recent_temporary>
@@ -274,7 +280,15 @@
       <option name="project" value="LOCAL" />
       <updated>1710080603243</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="updated POM, added steps to start the application and added postman collections.">
+      <option name="closed" value="true" />
+      <created>1710354084435</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1710354084435</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="UnknownFeatures">
@@ -295,7 +309,8 @@
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="commit" />
+    <MESSAGE value="updated POM, added steps to start the application and added postman collections." />
+    <option name="LAST_COMMIT_MESSAGE" value="updated POM, added steps to start the application and added postman collections." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

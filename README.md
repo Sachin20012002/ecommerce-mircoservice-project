@@ -16,6 +16,15 @@ This project implements a scalable and robust backend system for an eCommerce pl
 - Service Registry Microservice: Centralized microservice registration 📡
 - Proto for gRPC communication between microservices
 
+## API Documentation:
+- Product Service Swagger UI: http://localhost:9191/meesho/product-microservice/swagger-ui/index.html#/
+- Category Service Swagger UI: http://localhost:9191/meesho/category-microservice/swagger-ui/index.html#/
+- Filter Service Swagger UI: http://localhost:9191/meesho/filter-microservice/swagger-ui/index.html#/
+- User Service Swagger UI: http://localhost:9191/meesho/user-microservice/swagger-ui/index.html#/
+- Cart Service Swagger UI: http://localhost:9191/meesho/cart-microservice/swagger-ui/index.html#/
+- Order Service Swagger UI: http://localhost:9191/meesho/order-microservice/swagger-ui/index.html#/
+
+
 
 ## Installation
 - Java 17 is required.

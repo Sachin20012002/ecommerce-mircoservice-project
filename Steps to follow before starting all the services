@@ -2,7 +2,7 @@ Software to install:
 1) Mysql
 2) MongoDB
 3) elastic search ( v - 7.17.18 )
-4) kafka (v - 2.12-3.7.0)
+4) kafka (v - 2.12-3.7.0) (systemctl start kafka & systemctl start zookeeper)
 
 
 Create DB Schema in mysql:
